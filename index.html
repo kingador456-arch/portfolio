@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadoth Hossen Ador | Cybersecurity Expert</title>
+    <meta name="description" content="Computer Science Engineer & Cybersecurity Specialist | Ethical Hacker | SQA Tester | SOC Analyst">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap');
+    
+        :root {
+            --primary: #0ea5e9;
+            --accent: #3b82f6;
+            --dark: #0f172a;
+            --gray: #1e2937;
+            --light: #f8fafc;
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+            color: #e2e8f0;
+            line-height: 1.7;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+    
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+    
+        header {
+            background: linear-gradient(135deg, var(--dark), #1e2937);
+            border-radius: 24px;
+            padding: 60px 50px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+            border: 1px solid #334155;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+            z-index: 0;
+        }
+    
+        .avatar {
+            width: 160px;
+            height: 160px;
+            background: #1e2937;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            color: var(--primary);
+            border: 8px solid #e2e8f0;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+     
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: white;
+            letter-spacing: -0.02em;
+        }
+    
+        .title {
+            font-size: 1.35rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+    
+        .tagline {
+            max-width: 700px;
+            margin: 0 auto 32px;
+            font-size: 1.12rem;
+            opacity: 0.95;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+    
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+    
+        .nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 9999px;
+            background: rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+    
+        .nav a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+    
+        section {
+            background: rgba(15, 23, 42, 0.95);
+            border-radius: 20px;
+            padding: 48px;
+            margin-bottom: 32px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+            border: 1px solid #334155;
+        }
+    
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.85rem;
+            margin-bottom: 28px;
+            color: white;
+            position: relative;
+            padding-bottom: 12px;
+        }
+    
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+    
+        .bio {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 32px;
+        }
+    
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+    
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+    
+        .card {
+            background: #1e2937;
+            padding: 24px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+    
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2);
+        }
+    
+        .icon {
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+    
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    
+        .skill-tag {
+            background: #334155;
+            color: #e2e8f0;
+            padding: 8px 20px;
+            border-radius: 9999px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+    
+        .skill-tag:hover {
+            background: var(--primary);
+            color: white;
+        }
+    
+        .experience-item {
+            margin-bottom: 32px;
+        }
+    
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    
+        .exp-title {
+            font-weight: 600;
+            font-size: 1.15rem;
+        }
+    
+        .exp-company {
+            color: var(--primary);
+        }
+    
+        footer {
+            text-align: center;
+            padding: 40px 20px 20px;
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+    
+        @media (max-width: 768px) {
+            h1 { font-size: 2.6rem; }
+            header { padding: 50px 30px; }
+            section { padding: 36px 28px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Header -->
+        <header>
+            <div class="avatar">
+                <img src="avatar.jpg" alt="Shadoth Hossen Ador">
+            </div>
+            <h1>Shadoth Hossen Ador</h1>
+            <div class="title">Computer Science Engineer &amp; Cybersecurity Expert</div>
+            <p class="tagline">
+                Ethical Hacker | SQA Tester | SOC Analyst | Penetration Tester | OSINT Specialist | WordPress Security Professional
+            </p>
+        
+            <div class="nav">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </header>
+
+        <!-- About -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="bio">
+                I’m a passionate Computer Science Engineer and Cybersecurity Specialist with expertise in ethical hacking, penetration testing, OSINT, SQA testing, SOC analysis, and web application security.
+                I specialize in helping businesses strengthen their digital defenses through WordPress hardening, malware removal, and vulnerability assessments.
+            </div>
+            <div class="bio">
+                With a strong foundation in secure development practices and real-world security operations, I combine technical precision with clear communication to deliver exceptional results.
+                My approach prioritizes ethics, professionalism, and measurable impact for every client and project.
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="exp-title">Cybersecurity &amp; Ethical Hacking Intern</div>
+                        <div class="exp-company">Remote Internship</div>
+                    </div>
+                    <div style="color:#94a3b8; font-size:0.95rem;">Dec 2025 – Jan 2026</div>
+                </div>
+                <ul>
+                    <li>Conducted comprehensive Open Source Intelligence (OSINT) operations on both personal and corporate targets.</li>
+                    <li>Performed LinkedIn lead generation targeting US-based software company owners.</li>
+                    <li>Executed manual and automated penetration testing on web applications and systems.</li>
+                    <li>Performed reverse engineering on software and games to uncover vulnerabilities.</li>
+                    <li>Developed and customized WordPress websites for internal projects.</li>
+                </ul>
+            </div>
+        
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="exp-title">Facebook Business Page Manager</div>
+                        <div class="exp-company">Personal Business Page</div>
+                    </div>
+                    <div style="color:#94a3b8; font-size:0.95rem;">Jan 2021 – Mar 2022</div>
+                </div>
+                <ul>
+                    <li>Managed complete operations including content strategy, promotions, and customer engagement.</li>
+                    <li>Executed small-scale ad campaigns and boosted posts for lead generation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <h3 style="margin-bottom:16px;">Programming &amp; Web</h3>
+                    <div class="skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">WordPress</span>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 style="margin-bottom:16px;">Cybersecurity &amp; Testing</h3>
+                    <div class="skills">
+                        <span class="skill-tag">Penetration Testing</span>
+                        <span class="skill-tag">OSINT</span>
+                        <span class="skill-tag">SQA Testing</span>
+                        <span class="skill-tag">SOC Analysis</span>
+                        <span class="skill-tag">Reverse Engineering</span>
+                        <span class="skill-tag">WordPress Security</span>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="icon"><i class="fas fa-tools"></i></div>
+                    <h3 style="margin-bottom:16px;">Tools &amp; Technologies</h3>
+                    <div class="skills">
+                        <span class="skill-tag">Burp Suite</span>
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">Acunetix</span>
+                        <span class="skill-tag">Nessus</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="grid">
+                <div class="card">
+                    <strong>B.Sc. in Computer Science &amp; Engineering</strong><br>
+                    Uttara University<br>
+                    CGPA: 3.21 | 2023 – 2026
+                </div>
+                <div class="card">
+                    <strong>Cyber Security &amp; Ethical Hacking</strong><br>
+                    Arena Web Security<br>
+                    2025 – 2026
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <a href="mailto:Kingador456@gmail.com" style="text-decoration:none; color:inherit;">
+                    <div class="card">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <strong>Email</strong><br>
+                        Kingador456@gmail.com
+                    </div>
+                </a>
+            
+                <a href="https://www.linkedin.com/in/kingador456" target="_blank" style="text-decoration:none; color:inherit;">
+                    <div class="card">
+                        <div class="icon"><i class="fab fa-linkedin"></i></div>
+                        <strong>LinkedIn</strong><br>
+                        linkedin.com/in/kingador456
+                    </div>
+                </a>
+            
+                <div class="card">
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <strong>Phone</strong><br>
+                    +880 1799-297923
+                </div>
+            
+                <div class="card">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <strong>Location</strong><br>
+                    Uttara, Dhaka, Bangladesh
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        © 2026 Shadoth Hossen Ador • Secure • Ethical • Professional<br>
+        Built with passion for cybersecurity
+    </footer>
+
+    <script>
+        // Make sure script runs after everything loads
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const headerOffset = 100;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
