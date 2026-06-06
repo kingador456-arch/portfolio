@@ -17,11 +17,7 @@
             --light: #f8fafc;
         }
     
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
     
         body {
             font-family: 'Inter', system-ui, sans-serif;
@@ -32,11 +28,7 @@
             scroll-behavior: smooth;
         }
     
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
     
         header {
             background: linear-gradient(135deg, var(--dark), #1e2937);
@@ -46,200 +38,73 @@
             margin-bottom: 40px;
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
             border: 1px solid #334155;
-            position: relative;
-            overflow: hidden;
-        }
-    
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
-            z-index: 0;
         }
     
         .avatar {
-            width: 160px;
-            height: 160px;
-            background: #1e2937;
-            border-radius: 50%;
-            margin: 0 auto 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 64px;
-            color: var(--primary);
-            border: 8px solid #e2e8f0;
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3);
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
+            width: 160px; height: 160px; border-radius: 50%;
+            margin: 0 auto 24px; overflow: hidden; border: 8px solid #e2e8f0;
         }
-     
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .avatar img { width: 100%; height: 100%; object-fit: cover; }
     
-        h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3.2rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: white;
-            letter-spacing: -0.02em;
-        }
-    
-        .title {
-            font-size: 1.35rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 16px;
-            letter-spacing: 0.5px;
-        }
-    
-        .tagline {
-            max-width: 700px;
-            margin: 0 auto 32px;
-            font-size: 1.12rem;
-            opacity: 0.95;
-            color: #cbd5e1;
-            line-height: 1.5;
-        }
+        h1 { font-family: 'Space Grotesk', sans-serif; font-size: 3.2rem; margin-bottom: 12px; color: white; }
+        .title { font-size: 1.35rem; color: var(--primary); margin-bottom: 16px; }
+        .tagline { max-width: 700px; margin: 0 auto 32px; font-size: 1.12rem; color: #cbd5e1; }
     
         .nav {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 20px;
+            display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 20px;
         }
-    
         .nav a {
-            color: #e2e8f0;
-            text-decoration: none;
-            padding: 12px 28px;
-            border-radius: 9999px;
-            background: rgba(255,255,255,0.05);
-            transition: all 0.3s ease;
-            font-weight: 500;
+            color: #e2e8f0; text-decoration: none; padding: 12px 28px;
+            border-radius: 9999px; background: rgba(255,255,255,0.05);
+            transition: all 0.3s ease; font-weight: 500;
         }
-    
-        .nav a:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-2px);
-        }
+        .nav a:hover { background: var(--primary); color: white; transform: translateY(-2px); }
     
         section {
             background: rgba(15, 23, 42, 0.95);
             border-radius: 20px;
             padding: 48px;
             margin-bottom: 32px;
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
             border: 1px solid #334155;
         }
     
         h2 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.85rem;
-            margin-bottom: 28px;
-            color: white;
-            position: relative;
-            padding-bottom: 12px;
+            font-size: 1.85rem; margin-bottom: 28px; color: white;
+            position: relative; padding-bottom: 12px;
         }
-    
         h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 60px; height: 3px;
             background: linear-gradient(to right, var(--primary), var(--accent));
-            border-radius: 3px;
         }
     
-        .bio {
-            font-size: 1.1rem;
-            color: #cbd5e1;
-            margin-bottom: 32px;
-        }
+        .bio { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 32px; }
     
-        .grid {
+        .grid, .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
-        }
-    
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
     
-        .card {
+        .card, .project-card {
             background: #1e2937;
-            padding: 24px;
+            padding: 20px;
             border-radius: 16px;
             transition: all 0.3s ease;
         }
-    
-        .card:hover {
+        .project-card { color: #e2e8f0; text-decoration: none; }
+        .project-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2);
-        }
-    
-        .icon {
-            font-size: 28px;
-            color: var(--primary);
-            margin-bottom: 16px;
-        }
-    
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-    
-        .skill-tag {
             background: #334155;
-            color: #e2e8f0;
-            padding: 8px 20px;
-            border-radius: 9999px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: all 0.2s;
         }
     
-        .skill-tag:hover {
-            background: var(--primary);
-            color: white;
-        }
+        .icon { font-size: 28px; color: var(--primary); margin-bottom: 16px; }
     
-        .experience-item {
-            margin-bottom: 32px;
-        }
-    
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-    
-        .exp-title {
-            font-weight: 600;
-            font-size: 1.15rem;
-        }
-    
-        .exp-company {
-            color: var(--primary);
+        .skills { display: flex; flex-wrap: wrap; gap: 12px; }
+        .skill-tag {
+            background: #334155; color: #e2e8f0; padding: 8px 20px;
+            border-radius: 9999px; font-size: 0.95rem;
         }
     
         footer {
@@ -248,17 +113,10 @@
             opacity: 0.7;
             font-size: 0.95rem;
         }
-    
-        @media (max-width: 768px) {
-            h1 { font-size: 2.6rem; }
-            header { padding: 50px 30px; }
-            section { padding: 36px 28px; }
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Hero Header -->
         <header>
             <div class="avatar">
                 <img src="avatar.jpg" alt="Shadoth Hossen Ador">
@@ -268,11 +126,11 @@
             <p class="tagline">
                 Ethical Hacker | SQA Tester | SOC Analyst | Penetration Tester | OSINT Specialist | WordPress Security Professional
             </p>
-        
             <div class="nav">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
                 <a href="#education">Education</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -303,25 +161,11 @@
                     <div style="color:#94a3b8; font-size:0.95rem;">Dec 2025 – Jan 2026</div>
                 </div>
                 <ul>
-                    <li>Conducted comprehensive Open Source Intelligence (OSINT) operations on both personal and corporate targets.</li>
-                    <li>Performed LinkedIn lead generation targeting US-based software company owners.</li>
-                    <li>Executed manual and automated penetration testing on web applications and systems.</li>
-                    <li>Performed reverse engineering on software and games to uncover vulnerabilities.</li>
-                    <li>Developed and customized WordPress websites for internal projects.</li>
-                </ul>
-            </div>
-        
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <div class="exp-title">Facebook Business Page Manager</div>
-                        <div class="exp-company">Personal Business Page</div>
-                    </div>
-                    <div style="color:#94a3b8; font-size:0.95rem;">Jan 2021 – Mar 2022</div>
-                </div>
-                <ul>
-                    <li>Managed complete operations including content strategy, promotions, and customer engagement.</li>
-                    <li>Executed small-scale ad campaigns and boosted posts for lead generation.</li>
+                    <li>Conducted comprehensive Open Source Intelligence (OSINT) operations.</li>
+                    <li>Performed LinkedIn lead generation targeting US-based companies.</li>
+                    <li>Executed manual and automated penetration testing.</li>
+                    <li>Performed reverse engineering on software and games.</li>
+                    <li>Developed and customized WordPress websites.</li>
                 </ul>
             </div>
         </section>
@@ -332,7 +176,7 @@
             <div class="grid">
                 <div class="card">
                     <div class="icon"><i class="fas fa-code"></i></div>
-                    <h3 style="margin-bottom:16px;">Programming &amp; Web</h3>
+                    <h3>Programming &amp; Web</h3>
                     <div class="skills">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">JavaScript</span>
@@ -342,10 +186,9 @@
                         <span class="skill-tag">WordPress</span>
                     </div>
                 </div>
-            
                 <div class="card">
                     <div class="icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3 style="margin-bottom:16px;">Cybersecurity &amp; Testing</h3>
+                    <h3>Cybersecurity &amp; Testing</h3>
                     <div class="skills">
                         <span class="skill-tag">Penetration Testing</span>
                         <span class="skill-tag">OSINT</span>
@@ -355,10 +198,9 @@
                         <span class="skill-tag">WordPress Security</span>
                     </div>
                 </div>
-            
                 <div class="card">
                     <div class="icon"><i class="fas fa-tools"></i></div>
-                    <h3 style="margin-bottom:16px;">Tools &amp; Technologies</h3>
+                    <h3>Tools &amp; Technologies</h3>
                     <div class="skills">
                         <span class="skill-tag">Burp Suite</span>
                         <span class="skill-tag">Nmap</span>
@@ -366,6 +208,28 @@
                         <span class="skill-tag">Nessus</span>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section (All 15 Files) -->
+        <section id="portfolio">
+            <h2>Portfolio &amp; Reports</h2>
+            <div class="projects-grid">
+                <a href="1%20LFI-to-RCE%20case%20(PHP%20info%20screenshot).pdf" class="project-card" target="_blank"><strong>LFI-to-RCE Case Study</strong><br><small>PHP Info + RCE</small></a>
+                <a href="1%20website%20shell%20link%20with%20screenshot.pdf" class="project-card" target="_blank"><strong>Web Shell Upload</strong><br><small>Shell Link with Proof</small></a>
+                <a href="3%20random%20%22No%20Redirect%22%20websites.pdf" class="project-card" target="_blank"><strong>No Redirect Websites</strong><br><small>3 Findings</small></a>
+                <a href="5%20LFI%20website%20links%20with%20screenshots.pdf" class="project-card" target="_blank"><strong>LFI Vulnerabilities</strong><br><small>5 Websites</small></a>
+                <a href="5%20SQLi%20website%20links%20with%20screenshots.pdf" class="project-card" target="_blank"><strong>SQL Injection Findings</strong><br><small>5 Websites</small></a>
+                <a href="500%20lead%20generation%20Building%20owner%20of%20Queens....pdf" class="project-card" target="_blank"><strong>Lead Generation Report</strong><br><small>500 Queens Building Owners</small></a>
+                <a href="Bug%20Report%20Local%20File%20Inclusion%20(LFI)%20Vulnerabili....pdf" class="project-card" target="_blank"><strong>LFI Detailed Bug Report</strong><br><small>Vulnerability Report</small></a>
+                <a href="Extract%205%20websites%27%20user%20credentials%20using%20Havij....pdf" class="project-card" target="_blank"><strong>SQLi Credential Extraction</strong><br><small>Havij Tool</small></a>
+                <a href="Identify%203%20(WAF-protected)%20websites%20and%20d....pdf" class="project-card" target="_blank"><strong>WAF-Protected Websites</strong><br><small>3 Websites Identified</small></a>
+                <a href="Osint%20report%20on%20Jenna%20Maria%20davidson.pdf" class="project-card" target="_blank"><strong>OSINT Report - Jenna Maria Davidson</strong><br><small>Personal OSINT</small></a>
+                <a href="Software%20Agency%20Owner%20in%20NEW%20JerseyContact....pdf" class="project-card" target="_blank"><strong>Software Agency Owners - New Jersey</strong><br><small>Lead Generation</small></a>
+                <a href="Upload%20deface%20page%20to%20%E2%86%92%20nambardar.pkhom....pdf" class="project-card" target="_blank"><strong>Deface Page Upload</strong><br><small>Proof of Concept</small></a>
+                <a href="Vulnerability%20Assessment%20&%20Penetration%20Testin....pdf" class="project-card" target="_blank"><strong>Vulnerability Assessment &amp; Pen Testing</strong><br><small>Full Report</small></a>
+                <a href="corporate%20osint%20.pdf" class="project-card" target="_blank"><strong>Corporate OSINT Report</strong><br><small>Company Recon</small></a>
+                <a href="websites%20vulnerable%20to%20XSS%20(popup%20proof).pdf" class="project-card" target="_blank"><strong>XSS Vulnerabilities</strong><br><small>Popup Proof</small></a>
             </div>
         </section>
 
@@ -389,33 +253,26 @@
         <!-- Contact -->
         <section id="contact">
             <h2>Get In Touch</h2>
-            <div class="contact-grid">
+            <div class="grid">
                 <a href="mailto:Kingador456@gmail.com" style="text-decoration:none; color:inherit;">
                     <div class="card">
                         <div class="icon"><i class="fas fa-envelope"></i></div>
-                        <strong>Email</strong><br>
-                        Kingador456@gmail.com
+                        <strong>Email</strong><br>Kingador456@gmail.com
                     </div>
                 </a>
-            
                 <a href="https://www.linkedin.com/in/kingador456" target="_blank" style="text-decoration:none; color:inherit;">
                     <div class="card">
                         <div class="icon"><i class="fab fa-linkedin"></i></div>
-                        <strong>LinkedIn</strong><br>
-                        linkedin.com/in/kingador456
+                        <strong>LinkedIn</strong><br>linkedin.com/in/kingador456
                     </div>
                 </a>
-            
                 <div class="card">
                     <div class="icon"><i class="fas fa-phone"></i></div>
-                    <strong>Phone</strong><br>
-                    +880 1799-297923
+                    <strong>Phone</strong><br>+880 1799-297923
                 </div>
-            
                 <div class="card">
                     <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <strong>Location</strong><br>
-                    Uttara, Dhaka, Bangladesh
+                    <strong>Location</strong><br>Uttara, Dhaka, Bangladesh
                 </div>
             </div>
         </section>
@@ -427,23 +284,17 @@
     </footer>
 
     <script>
-        // Make sure script runs after everything loads
         document.addEventListener("DOMContentLoaded", function() {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);
                     const targetElement = document.getElementById(targetId);
-                    
                     if (targetElement) {
                         const headerOffset = 100;
                         const elementPosition = targetElement.getBoundingClientRect().top;
                         const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                     }
                 });
             });
