@@ -9,48 +9,96 @@
     <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Google Fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
         :root {
             --primary: #0ea5e9;
             --accent: #3b82f6;
-            --dark: #0f172a;
-            --gray: #1e2937;
-            --light: #f8fafc;
+            --bg: #0f172a;
+            --bg2: #1e2937;
+            --card: #1e2937;
+            --text: #e2e8f0;
+            --text2: #cbd5e1;
+            --text3: #94a3b8;
+            --border: #334155;
         }
+
+        [data-theme="light"] {
+            --bg: #f1f5f9;
+            --bg2: #e2e8f0;
+            --card: #ffffff;
+            --text: #0f172a;
+            --text2: #334155;
+            --text3: #64748b;
+            --border: #cbd5e1;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         body {
             font-family: 'Inter', system-ui, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
-            color: #e2e8f0;
+            background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
+            color: var(--text);
             line-height: 1.7;
             min-height: 100vh;
+            transition: background 0.3s ease, color 0.3s ease;
         }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 40px 20px;
         }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 22px;
+            right: 22px;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--card);
+            border: 1px solid var(--border);
+            color: var(--primary);
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background: var(--primary);
+            color: white;
+        }
+
         /* =========================
            HEADER
         ========================== */
         header {
-            background: linear-gradient(135deg, var(--dark), #1e2937);
+            background: linear-gradient(135deg, var(--bg), var(--bg2));
             border-radius: 24px;
             padding: 60px 50px;
             text-align: center;
             margin-bottom: 40px;
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 40%);
-            border: 1px solid #334155;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+            border: 1px solid var(--border);
         }
+
         .avatar {
             width: 160px;
             height: 160px;
@@ -59,29 +107,34 @@
             overflow: hidden;
             border: 8px solid #e2e8f0;
         }
+
         .avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
+
         h1 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 3.2rem;
             margin-bottom: 12px;
-            color: white;
+            color: var(--text);
         }
+
         .title {
             font-size: 1.35rem;
             color: var(--primary);
             margin-bottom: 16px;
         }
+
         .tagline {
             max-width: 750px;
             margin: 0 auto 32px;
             font-size: 1.12rem;
-            color: #cbd5e1;
+            color: var(--text2);
         }
+
         /* =========================
            NAVIGATION
         ========================== */
@@ -92,38 +145,49 @@
             flex-wrap: wrap;
             margin-top: 20px;
         }
+
         .nav a {
-            color: #e2e8f0;
+            color: var(--text);
             text-decoration: none;
             padding: 12px 28px;
             border-radius: 9999px;
             background: rgba(255,255,255,0.05);
             transition: all 0.3s ease;
             font-weight: 500;
+            border: 1px solid transparent;
         }
+
+        [data-theme="light"] .nav a {
+            background: rgba(0,0,0,0.04);
+        }
+
         .nav a:hover {
             background: var(--primary);
             color: white;
             transform: translateY(-2px);
         }
+
         /* =========================
            SECTIONS
         ========================== */
         section {
-            background: rgba(15, 23, 42, 0.95);
+            background: var(--card);
             border-radius: 20px;
             padding: 48px;
             margin-bottom: 32px;
-            border: 1px solid #334155;
+            border: 1px solid var(--border);
+            transition: background 0.3s ease;
         }
+
         h2 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.85rem;
             margin-bottom: 28px;
-            color: white;
+            color: var(--text);
             position: relative;
             padding-bottom: 12px;
         }
+
         h2::after {
             content: '';
             position: absolute;
@@ -133,11 +197,13 @@
             height: 3px;
             background: linear-gradient(to right, var(--primary), var(--accent));
         }
+
         .bio {
             font-size: 1.1rem;
-            color: #cbd5e1;
+            color: var(--text2);
             margin-bottom: 30px;
         }
+
         /* =========================
            GRID
         ========================== */
@@ -147,47 +213,57 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
+
         /* =========================
            CARDS
         ========================== */
         .card,
         .project-card {
-            background: #1e2937;
+            background: var(--bg2);
             padding: 22px;
             border-radius: 16px;
             transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
+
+        [data-theme="light"] .card,
+        [data-theme="light"] .project-card {
+            background: #f8fafc;
+        }
+
         .card:hover,
         .project-card:hover {
             transform: translateY(-6px);
-            background: #334155;
-        }
-        .project-card {
-            color: #e2e8f0;
-            text-decoration: none;
-            display: block;
-            border: 1px solid transparent;
-        }
-        .project-card:hover {
             border-color: var(--primary);
         }
+
+        .project-card {
+            color: var(--text);
+            text-decoration: none;
+            display: block;
+        }
+
         .project-card strong {
-            color: white;
+            color: var(--text);
             font-size: 1.05rem;
         }
+
         .project-card small {
-            color: #94a3b8;
+            color: var(--text3);
         }
+
         .project-icon {
             font-size: 25px;
             color: var(--primary);
             margin-bottom: 14px;
         }
+
         .icon {
             font-size: 28px;
             color: var(--primary);
             margin-bottom: 16px;
         }
+
         /* =========================
            SKILLS
         ========================== */
@@ -197,21 +273,28 @@
             gap: 12px;
             margin-top: 15px;
         }
+
         .skill-tag {
-            background: #334155;
-            color: #e2e8f0;
+            background: var(--border);
+            color: var(--text);
             padding: 8px 20px;
             border-radius: 9999px;
             font-size: 0.95rem;
         }
+
         /* =========================
            EXPERIENCE
         ========================== */
         .experience-item {
-            background: #1e2937;
+            background: var(--bg2);
             padding: 25px;
             border-radius: 16px;
         }
+
+        [data-theme="light"] .experience-item {
+            background: #f8fafc;
+        }
+
         .experience-header {
             display: flex;
             justify-content: space-between;
@@ -219,39 +302,46 @@
             flex-wrap: wrap;
             margin-bottom: 20px;
         }
+
         .exp-title {
             font-size: 1.2rem;
             font-weight: 600;
-            color: white;
+            color: var(--text);
         }
+
         .exp-company {
             color: var(--primary);
             margin-top: 5px;
         }
+
         .experience-item ul {
             padding-left: 20px;
-            color: #cbd5e1;
+            color: var(--text2);
         }
+
         .experience-item li {
             margin-bottom: 8px;
         }
+
         /* =========================
            PORTFOLIO
         ========================== */
         .portfolio-intro {
-            color: #94a3b8;
+            color: var(--text3);
             margin-top: -12px;
             margin-bottom: 28px;
         }
+
         .file-type {
             display: inline-block;
             margin-top: 12px;
             font-size: 0.78rem;
             color: var(--primary);
-            background: rgba(14, 165, 233, 0.10);
+            background: rgba(14, 165, 233, 0.12);
             padding: 4px 10px;
             border-radius: 999px;
         }
+
         /* =========================
            CONTACT
         ========================== */
@@ -260,6 +350,7 @@
             color: inherit;
             display: block;
         }
+
         /* =========================
            FOOTER
         ========================== */
@@ -268,7 +359,9 @@
             padding: 40px 20px 20px;
             opacity: 0.7;
             font-size: 0.95rem;
+            color: var(--text3);
         }
+
         /* =========================
            MOBILE
         ========================== */
@@ -306,10 +399,21 @@
             .experience-header {
                 display: block;
             }
+            .theme-toggle {
+                top: 14px;
+                right: 14px;
+                width: 42px;
+                height: 42px;
+            }
         }
     </style>
 </head>
 <body>
+<!-- Dark / Light Mode Toggle -->
+<button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+    <i class="fas fa-moon" id="themeIcon"></i>
+</button>
+
 <div class="container">
     <!-- =========================
          HEADER
@@ -379,28 +483,16 @@
                         Remote Internship
                     </div>
                 </div>
-                <div style="color:#94a3b8; font-size:0.95rem;">
+                <div style="color:var(--text3); font-size:0.95rem;">
                     Dec 2025 – Jan 2026
                 </div>
             </div>
             <ul>
-                <li>
-                    Conducted comprehensive Open Source Intelligence
-                    (OSINT) operations.
-                </li>
-                <li>
-                    Performed LinkedIn lead generation targeting
-                    US-based companies.
-                </li>
-                <li>
-                    Executed manual and automated penetration testing.
-                </li>
-                <li>
-                    Performed reverse engineering on software and games.
-                </li>
-                <li>
-                    Developed and customized WordPress websites.
-                </li>
+                <li>Conducted comprehensive Open Source Intelligence (OSINT) operations.</li>
+                <li>Performed LinkedIn lead generation targeting US-based companies.</li>
+                <li>Executed manual and automated penetration testing.</li>
+                <li>Performed reverse engineering on software and games.</li>
+                <li>Developed and customized WordPress websites.</li>
             </ul>
         </div>
     </section>
@@ -412,9 +504,7 @@
         <h2>Technical Skills</h2>
         <div class="grid">
             <div class="card">
-                <div class="icon">
-                    <i class="fas fa-code"></i>
-                </div>
+                <div class="icon"><i class="fas fa-code"></i></div>
                 <h3>Programming &amp; Web</h3>
                 <div class="skills">
                     <span class="skill-tag">Python</span>
@@ -426,9 +516,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
+                <div class="icon"><i class="fas fa-shield-alt"></i></div>
                 <h3>Cybersecurity &amp; Testing</h3>
                 <div class="skills">
                     <span class="skill-tag">Penetration Testing</span>
@@ -440,9 +528,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="icon">
-                    <i class="fas fa-tools"></i>
-                </div>
+                <div class="icon"><i class="fas fa-tools"></i></div>
                 <h3>Tools &amp; Technologies</h3>
                 <div class="skills">
                     <span class="skill-tag">Burp Suite</span>
@@ -466,7 +552,6 @@
         </p>
         <div class="projects-grid">
 
-            <!-- 1. LFI-to-RCE -->
             <a href="lfi-rce.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-file-shield"></i></div>
                 <strong>LFI-to-RCE Case Study</strong><br>
@@ -474,7 +559,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 2. Web Shell -->
             <a href="web-shell.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-terminal"></i></div>
                 <strong>Web Shell Upload</strong><br>
@@ -482,7 +566,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 3. No Redirect -->
             <a href="no-redirect.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-link"></i></div>
                 <strong>No Redirect Websites</strong><br>
@@ -490,7 +573,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 4. LFI Findings -->
             <a href="lfi-findings.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-bug"></i></div>
                 <strong>LFI Vulnerabilities</strong><br>
@@ -498,7 +580,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 5. SQLi Findings -->
             <a href="sqli-findings.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-database"></i></div>
                 <strong>SQL Injection Findings</strong><br>
@@ -506,7 +587,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 6. Queens Leads -->
             <a href="queens-leads-on-fiver.xlsx" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-table"></i></div>
                 <strong>Queens Lead Generation</strong><br>
@@ -514,7 +594,6 @@
                 <span class="file-type">EXCEL FILE</span>
             </a>
 
-            <!-- 7. LFI Bug Report -->
             <a href="lfi-bug-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-file-circle-exclamation"></i></div>
                 <strong>LFI Detailed Bug Report</strong><br>
@@ -522,7 +601,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 8. Havij Report -->
             <a href="havij-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-database"></i></div>
                 <strong>SQLi Credential Extraction</strong><br>
@@ -530,7 +608,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 9. WAF SQLi -->
             <a href="waf-sqli-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-shield-halved"></i></div>
                 <strong>WAF-Protected Websites</strong><br>
@@ -538,7 +615,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 10. Personal OSINT -->
             <a href="osint-personal.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-user-secret"></i></div>
                 <strong>OSINT Investigation Report</strong><br>
@@ -546,7 +622,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 11. New Jersey Leads -->
             <a href="New-jersey-software-agency-leads-on-Fiver.xlsx" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-building"></i></div>
                 <strong>New Jersey Software Agency Leads</strong><br>
@@ -554,7 +629,6 @@
                 <span class="file-type">EXCEL FILE</span>
             </a>
 
-            <!-- 12. Deface Page -->
             <a href="Deface-page-upload.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-code"></i></div>
                 <strong>Deface Page Upload</strong><br>
@@ -562,15 +636,14 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 13. Corporate OSINT -->
-            <a href="Corporate-osint.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+            <!-- FIXED: lowercase filename -->
+            <a href="corporate-osint.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-building-shield"></i></div>
                 <strong>Corporate OSINT Report</strong><br>
                 <small>Company Reconnaissance</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 14. XSS -->
             <a href="XSS-popup-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-window-restore"></i></div>
                 <strong>XSS Vulnerabilities</strong><br>
@@ -578,7 +651,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 15. Criminal Records -->
             <a href="Criminal-records-check-on-Fiver.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-file-circle-check"></i></div>
                 <strong>Criminal Records Check</strong><br>
@@ -586,7 +658,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 16. Recruitment Activity -->
             <a href="Recruitment-Activity-Report-Fiver.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-users"></i></div>
                 <strong>Recruitment Activity Report</strong><br>
@@ -594,7 +665,6 @@
                 <span class="file-type">PDF REPORT</span>
             </a>
 
-            <!-- 17. Bronx Cooperative Complexes -->
             <a href="Phoneemail-sheet-for-cooperative-complexes-in-the-BronxNY-Fiver.xlsx" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-address-book"></i></div>
                 <strong>Bronx Cooperative Complexes</strong><br>
@@ -630,7 +700,6 @@
     <section id="contact">
         <h2>Get In Touch</h2>
         <div class="grid">
-            <!-- EMAIL -->
             <a href="mailto:Kingador456@gmail.com" class="contact-link">
                 <div class="card">
                     <div class="icon"><i class="fas fa-envelope"></i></div>
@@ -638,7 +707,6 @@
                     Kingador456@gmail.com
                 </div>
             </a>
-            <!-- LINKEDIN -->
             <a href="https://www.linkedin.com/in/kingador456" target="_blank" rel="noopener noreferrer" class="contact-link">
                 <div class="card">
                     <div class="icon"><i class="fab fa-linkedin"></i></div>
@@ -646,13 +714,11 @@
                     linkedin.com/in/kingador456
                 </div>
             </a>
-            <!-- PHONE -->
             <div class="card">
                 <div class="icon"><i class="fas fa-phone"></i></div>
                 <strong>Phone</strong><br>
                 +880 1799-297923
             </div>
-            <!-- LOCATION -->
             <div class="card">
                 <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
                 <strong>Location</strong><br>
@@ -662,36 +728,57 @@
     </section>
 </div>
 
-<!-- =========================
-     FOOTER
-========================== -->
 <footer>
     © 2026 Shadoth Hossen Ador • Secure • Ethical • Professional<br>
     Built with passion for cybersecurity
 </footer>
 
-<!-- =========================
-     SMOOTH SCROLL (only for internal # links)
-========================== -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                const headerOffset = 40;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.scrollY - headerOffset;
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    updateIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateIcon(next);
+    });
+
+    function updateIcon(theme) {
+        if (theme === 'dark') {
+            themeIcon.className = 'fas fa-moon';
+        } else {
+            themeIcon.className = 'fas fa-sun';
+        }
+    }
+
+    // Smooth scroll
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerOffset = 40;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
         });
     });
-});
 </script>
 </body>
 </html>
