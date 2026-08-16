@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shadoth Hossen Ador | Cybersecurity Expert</title>
-    <meta name="description"
-          content="Computer Science Engineer & Cybersecurity Specialist | Ethical Hacker | SQA Tester | SOC Analyst">
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="description" content="Computer Science Engineer & Cybersecurity Specialist | Ethical Hacker | SQA Tester | SOC Analyst">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
-
         :root {
             --primary: #0ea5e9;
             --accent: #3b82f6;
@@ -23,7 +21,6 @@
             --text3: #94a3b8;
             --border: #334155;
         }
-
         [data-theme="light"] {
             --bg: #f1f5f9;
             --bg2: #e2e8f0;
@@ -33,57 +30,78 @@
             --text3: #64748b;
             --border: #cbd5e1;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family: 'Inter', system-ui, sans-serif;
             background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
             color: var(--text);
             line-height: 1.7;
             min-height: 100vh;
-            transition: background 0.3s ease, color 0.3s ease;
+            transition: background 0.35s ease, color 0.35s ease;
         }
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
-        /* Theme Toggle Button */
-        .theme-toggle {
+        /* ========== SINGLE THEME SWITCH ========== */
+        .theme-switch {
             position: fixed;
-            top: 22px;
-            right: 22px;
-            z-index: 999;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--card);
-            border: 1px solid var(--border);
-            color: var(--primary);
-            font-size: 1.25rem;
-            cursor: pointer;
+            top: 18px;
+            right: 18px;
+            z-index: 1000;
+        }
+
+        .theme-toggle {
             display: flex;
             align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            gap: 8px;
+            padding: 8px 18px 8px 14px;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            user-select: none;
+        }
+
+        /* Dark / Night Mode look (matches your image) */
+        .theme-toggle.dark {
+            background: #0f172a;
+            color: #ffffff;
+        }
+        .theme-toggle.dark i {
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        /* Light / Day Mode look */
+        .theme-toggle.light {
+            background: #f1f5f9;
+            color: #0f172a;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+            border: 1px solid #e2e8f0;
+        }
+        .theme-toggle.light i {
+            color: #f59e0b; /* warm sun color */
+            font-size: 1.05rem;
         }
 
         .theme-toggle:hover {
-            transform: scale(1.1);
-            background: var(--primary);
-            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
 
         /* =========================
@@ -98,7 +116,6 @@
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
             border: 1px solid var(--border);
         }
-
         .avatar {
             width: 160px;
             height: 160px;
@@ -107,34 +124,42 @@
             overflow: hidden;
             border: 8px solid #e2e8f0;
         }
-
         .avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
-
         h1 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 3.2rem;
             margin-bottom: 12px;
             color: var(--text);
         }
-
-        .title {
-            font-size: 1.35rem;
-            color: var(--primary);
+        /* Continuous scrolling title */
+        .title-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
             margin-bottom: 16px;
         }
-
+        .title {
+            display: inline-block;
+            font-size: 1.35rem;
+            color: var(--primary);
+            padding-left: 100%;
+            animation: marquee 18s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
         .tagline {
             max-width: 750px;
             margin: 0 auto 32px;
             font-size: 1.12rem;
             color: var(--text2);
         }
-
         /* =========================
            NAVIGATION
         ========================== */
@@ -145,7 +170,6 @@
             flex-wrap: wrap;
             margin-top: 20px;
         }
-
         .nav a {
             color: var(--text);
             text-decoration: none;
@@ -154,19 +178,15 @@
             background: rgba(255,255,255,0.05);
             transition: all 0.3s ease;
             font-weight: 500;
-            border: 1px solid transparent;
         }
-
         [data-theme="light"] .nav a {
-            background: rgba(0,0,0,0.04);
+            background: rgba(0,0,0,0.05);
         }
-
         .nav a:hover {
             background: var(--primary);
             color: white;
             transform: translateY(-2px);
         }
-
         /* =========================
            SECTIONS
         ========================== */
@@ -176,9 +196,7 @@
             padding: 48px;
             margin-bottom: 32px;
             border: 1px solid var(--border);
-            transition: background 0.3s ease;
         }
-
         h2 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.85rem;
@@ -187,7 +205,6 @@
             position: relative;
             padding-bottom: 12px;
         }
-
         h2::after {
             content: '';
             position: absolute;
@@ -197,26 +214,17 @@
             height: 3px;
             background: linear-gradient(to right, var(--primary), var(--accent));
         }
-
         .bio {
             font-size: 1.1rem;
             color: var(--text2);
             margin-bottom: 30px;
         }
-
-        /* =========================
-           GRID
-        ========================== */
         .grid,
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-
-        /* =========================
-           CARDS
-        ========================== */
         .card,
         .project-card {
             background: var(--bg2);
@@ -225,55 +233,43 @@
             transition: all 0.3s ease;
             border: 1px solid transparent;
         }
-
         [data-theme="light"] .card,
         [data-theme="light"] .project-card {
             background: #f8fafc;
         }
-
         .card:hover,
         .project-card:hover {
             transform: translateY(-6px);
             border-color: var(--primary);
         }
-
         .project-card {
             color: var(--text);
             text-decoration: none;
             display: block;
         }
-
         .project-card strong {
             color: var(--text);
             font-size: 1.05rem;
         }
-
         .project-card small {
             color: var(--text3);
         }
-
         .project-icon {
             font-size: 25px;
             color: var(--primary);
             margin-bottom: 14px;
         }
-
         .icon {
             font-size: 28px;
             color: var(--primary);
             margin-bottom: 16px;
         }
-
-        /* =========================
-           SKILLS
-        ========================== */
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
             margin-top: 15px;
         }
-
         .skill-tag {
             background: var(--border);
             color: var(--text);
@@ -281,20 +277,15 @@
             border-radius: 9999px;
             font-size: 0.95rem;
         }
-
-        /* =========================
-           EXPERIENCE
-        ========================== */
         .experience-item {
             background: var(--bg2);
             padding: 25px;
             border-radius: 16px;
+            margin-bottom: 20px;
         }
-
         [data-theme="light"] .experience-item {
             background: #f8fafc;
         }
-
         .experience-header {
             display: flex;
             justify-content: space-between;
@@ -302,36 +293,27 @@
             flex-wrap: wrap;
             margin-bottom: 20px;
         }
-
         .exp-title {
             font-size: 1.2rem;
             font-weight: 600;
             color: var(--text);
         }
-
         .exp-company {
             color: var(--primary);
             margin-top: 5px;
         }
-
         .experience-item ul {
             padding-left: 20px;
             color: var(--text2);
         }
-
         .experience-item li {
             margin-bottom: 8px;
         }
-
-        /* =========================
-           PORTFOLIO
-        ========================== */
         .portfolio-intro {
             color: var(--text3);
             margin-top: -12px;
             margin-bottom: 28px;
         }
-
         .file-type {
             display: inline-block;
             margin-top: 12px;
@@ -341,19 +323,11 @@
             padding: 4px 10px;
             border-radius: 999px;
         }
-
-        /* =========================
-           CONTACT
-        ========================== */
         .contact-link {
             text-decoration: none;
             color: inherit;
             display: block;
         }
-
-        /* =========================
-           FOOTER
-        ========================== */
         footer {
             text-align: center;
             padding: 40px 20px 20px;
@@ -361,10 +335,6 @@
             font-size: 0.95rem;
             color: var(--text3);
         }
-
-        /* =========================
-           MOBILE
-        ========================== */
         @media (max-width: 768px) {
             .container {
                 padding: 20px 12px;
@@ -399,32 +369,36 @@
             .experience-header {
                 display: block;
             }
+            .theme-switch {
+                top: 12px;
+                right: 12px;
+            }
             .theme-toggle {
-                top: 14px;
-                right: 14px;
-                width: 42px;
-                height: 42px;
+                padding: 7px 14px 7px 12px;
+                font-size: 0.78rem;
             }
         }
     </style>
 </head>
 <body>
-<!-- Dark / Light Mode Toggle -->
-<button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
-    <i class="fas fa-moon" id="themeIcon"></i>
-</button>
+
+<!-- Single Theme Switch (like your image) -->
+<div class="theme-switch">
+    <button class="theme-toggle dark" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+        <span id="themeLabel">NIGHT MODE</span>
+    </button>
+</div>
 
 <div class="container">
-    <!-- =========================
-         HEADER
-    ========================== -->
     <header>
         <div class="avatar">
             <img src="avatar.jpg" alt="Shadoth Hossen Ador">
         </div>
         <h1>Shadoth Hossen Ador</h1>
-        <div class="title">
-            Computer Science Engineer &amp; Cybersecurity Expert
+      
+        <div class="title-wrapper">
+            <div class="title">Computer Science Engineer &amp; Cybersecurity Expert</div>
         </div>
         <p class="tagline">
             Ethical Hacker |
@@ -443,10 +417,6 @@
             <a href="#contact">Contact</a>
         </div>
     </header>
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
     <section id="about">
         <h2>About Me</h2>
         <div class="bio">
@@ -467,21 +437,14 @@
             and measurable impact for every client and project.
         </div>
     </section>
-
-    <!-- =========================
-         EXPERIENCE
-    ========================== -->
     <section id="experience">
         <h2>Professional Experience</h2>
+        <!-- Cybersecurity Internship first -->
         <div class="experience-item">
             <div class="experience-header">
                 <div>
-                    <div class="exp-title">
-                        Cybersecurity &amp; Ethical Hacking Intern
-                    </div>
-                    <div class="exp-company">
-                        Remote Internship
-                    </div>
+                    <div class="exp-title">Cybersecurity &amp; Ethical Hacking Intern</div>
+                    <div class="exp-company">Remote Internship</div>
                 </div>
                 <div style="color:var(--text3); font-size:0.95rem;">
                     Dec 2025 – Jan 2026
@@ -495,11 +458,28 @@
                 <li>Developed and customized WordPress websites.</li>
             </ul>
         </div>
+        <!-- Freelance second -->
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="exp-title">Freelance OSINT &amp; Lead Generation Specialist</div>
+                    <div class="exp-company">Fiverr | Remote</div>
+                </div>
+                <div style="color:var(--text3); font-size:0.95rem;">
+                    1 Year
+                </div>
+            </div>
+            <ul>
+                <li>Managed client projects for international clients from the USA, Australia, Philippines, and Denmark, maintaining professional communication and delivering projects with consistently strong client satisfaction and 5-star ratings.</li>
+                <li>Conducted Personal OSINT and Corporate OSINT investigations using publicly available and open-source information to identify, verify, and organize relevant intelligence.</li>
+                <li>Performed background research and due-diligence investigations, including publicly available criminal-record and professional-history information where legally accessible.</li>
+                <li>Generated and qualified B2B leads by researching companies, decision-makers, and relevant business prospects based on client requirements.</li>
+                <li>Collected and verified publicly available business contact information, including professional email addresses and phone numbers, using open-source research methods.</li>
+                <li>Communicated directly with clients to understand requirements, clarify objectives, manage expectations, and convert inquiries into paid projects.</li>
+                <li>Prepared structured research findings and delivered accurate, organized information while maintaining confidentiality, attention to detail, and professional standards.</li>
+            </ul>
+        </div>
     </section>
-
-    <!-- =========================
-         SKILLS
-    ========================== -->
     <section id="skills">
         <h2>Technical Skills</h2>
         <div class="grid">
@@ -537,12 +517,19 @@
                     <span class="skill-tag">Nessus</span>
                 </div>
             </div>
+            <!-- New OSINT Tools Box -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-search"></i></div>
+                <h3>OSINT Tools</h3>
+                <div class="skills">
+                    <span class="skill-tag">Maltego</span>
+                    <span class="skill-tag">SpiderFoot</span>
+                    <span class="skill-tag">Sherlock</span>
+                    <span class="skill-tag">Kali Linux</span>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- =========================
-         PORTFOLIO & REPORTS
-    ========================== -->
     <section id="portfolio">
         <h2>Portfolio &amp; Reports</h2>
         <p class="portfolio-intro">
@@ -551,133 +538,110 @@
             Click any project to open the report or file instantly.
         </p>
         <div class="projects-grid">
-
             <a href="lfi-rce.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-file-shield"></i></div>
                 <strong>LFI-to-RCE Case Study</strong><br>
                 <small>PHP Info + RCE</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="web-shell.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-terminal"></i></div>
                 <strong>Web Shell Upload</strong><br>
                 <small>Shell Link with Proof</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="no-redirect.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-link"></i></div>
                 <strong>No Redirect Websites</strong><br>
                 <small>3 Findings</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="lfi-findings.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-bug"></i></div>
                 <strong>LFI Vulnerabilities</strong><br>
                 <small>5 Websites</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="sqli-findings.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-database"></i></div>
                 <strong>SQL Injection Findings</strong><br>
                 <small>5 Websites</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="queens-leads-on-fiver.xlsx" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-table"></i></div>
                 <strong>Queens Lead Generation</strong><br>
                 <small>Building Owner Contact Research</small><br>
                 <span class="file-type">EXCEL FILE</span>
             </a>
-
             <a href="lfi-bug-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-file-circle-exclamation"></i></div>
                 <strong>LFI Detailed Bug Report</strong><br>
                 <small>Vulnerability Report</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="havij-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-database"></i></div>
                 <strong>SQLi Credential Extraction</strong><br>
                 <small>Havij Tool Report</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="waf-sqli-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-shield-halved"></i></div>
                 <strong>WAF-Protected Websites</strong><br>
                 <small>3 Websites Identified</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="osint-personal.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-user-secret"></i></div>
                 <strong>OSINT Investigation Report</strong><br>
                 <small>Personal OSINT Research</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="New-jersey-software-agency-leads-on-Fiver.xlsx" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-building"></i></div>
                 <strong>New Jersey Software Agency Leads</strong><br>
                 <small>Software Agency Lead Generation</small><br>
                 <span class="file-type">EXCEL FILE</span>
             </a>
-
             <a href="Deface-page-upload.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-code"></i></div>
                 <strong>Deface Page Upload</strong><br>
                 <small>Proof of Concept</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
-            <!-- FIXED: lowercase filename -->
             <a href="corporate-osint.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-building-shield"></i></div>
                 <strong>Corporate OSINT Report</strong><br>
                 <small>Company Reconnaissance</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="XSS-popup-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-window-restore"></i></div>
                 <strong>XSS Vulnerabilities</strong><br>
                 <small>Popup Proof</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="Criminal-records-check-on-Fiver.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-file-circle-check"></i></div>
                 <strong>Criminal Records Check</strong><br>
                 <small>Fiverr Research Report</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="Recruitment-Activity-Report-Fiver.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-users"></i></div>
                 <strong>Recruitment Activity Report</strong><br>
                 <small>Recruitment Research</small><br>
                 <span class="file-type">PDF REPORT</span>
             </a>
-
             <a href="Phoneemail-sheet-for-cooperative-complexes-in-the-BronxNY-Fiver.xlsx" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-icon"><i class="fas fa-address-book"></i></div>
                 <strong>Bronx Cooperative Complexes</strong><br>
                 <small>Phone &amp; Email Research</small><br>
                 <span class="file-type">EXCEL FILE</span>
             </a>
-
         </div>
     </section>
-
-    <!-- =========================
-         EDUCATION
-    ========================== -->
     <section id="education">
         <h2>Education</h2>
         <div class="grid">
@@ -693,10 +657,6 @@
             </div>
         </div>
     </section>
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
     <section id="contact">
         <h2>Get In Touch</h2>
         <div class="grid">
@@ -727,38 +687,47 @@
         </div>
     </section>
 </div>
-
 <footer>
     © 2026 Shadoth Hossen Ador • Secure • Ethical • Professional<br>
     Built with passion for cybersecurity
 </footer>
 
 <script>
-    // Theme Toggle
     const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const html = document.documentElement;
+    const themeLabel  = document.getElementById('themeLabel');
+    const html        = document.documentElement;
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    html.setAttribute('data-theme', savedTheme);
-    updateIcon(savedTheme);
+    function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
 
-    themeToggle.addEventListener('click', () => {
-        const current = html.getAttribute('data-theme');
-        const next = current === 'dark' ? 'light' : 'dark';
-        html.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-        updateIcon(next);
-    });
+        try {
+            localStorage.setItem('theme', theme);
+        } catch (e) {}
 
-    function updateIcon(theme) {
+        // Update the switch appearance
         if (theme === 'dark') {
-            themeIcon.className = 'fas fa-moon';
+            themeToggle.classList.remove('light');
+            themeToggle.classList.add('dark');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i><span id="themeLabel">NIGHT MODE</span>';
         } else {
-            themeIcon.className = 'fas fa-sun';
+            themeToggle.classList.remove('dark');
+            themeToggle.classList.add('light');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i><span id="themeLabel">DAY MODE</span>';
         }
     }
+
+    // Load saved theme (default dark)
+    let savedTheme = 'dark';
+    try {
+        savedTheme = localStorage.getItem('theme') || 'dark';
+    } catch (e) {}
+    setTheme(savedTheme);
+
+    // Toggle on click
+    themeToggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        setTheme(current === 'dark' ? 'light' : 'dark');
+    });
 
     // Smooth scroll
     document.addEventListener("DOMContentLoaded", function () {
