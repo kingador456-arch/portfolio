@@ -7,8 +7,8 @@
     <meta name="description" content="Computer Science Engineer & Cybersecurity Specialist | Ethical Hacker | SQA Tester | SOC Analyst">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap');
-    
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+   
         :root {
             --primary: #0ea5e9;
             --accent: #3b82f6;
@@ -16,9 +16,9 @@
             --gray: #1e2937;
             --light: #f8fafc;
         }
-    
+   
         * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+   
         body {
             font-family: 'Inter', system-ui, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
@@ -27,9 +27,9 @@
             min-height: 100vh;
             scroll-behavior: smooth;
         }
-    
+   
         .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-    
+   
         header {
             background: linear-gradient(135deg, var(--dark), #1e2937);
             border-radius: 24px;
@@ -39,17 +39,17 @@
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
             border: 1px solid #334155;
         }
-    
+   
         .avatar {
             width: 160px; height: 160px; border-radius: 50%;
             margin: 0 auto 24px; overflow: hidden; border: 8px solid #e2e8f0;
         }
         .avatar img { width: 100%; height: 100%; object-fit: cover; }
-    
+   
         h1 { font-family: 'Space Grotesk', sans-serif; font-size: 3.2rem; margin-bottom: 12px; color: white; }
         .title { font-size: 1.35rem; color: var(--primary); margin-bottom: 16px; }
         .tagline { max-width: 700px; margin: 0 auto 32px; font-size: 1.12rem; color: #cbd5e1; }
-    
+   
         .nav {
             display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 20px;
         }
@@ -59,7 +59,7 @@
             transition: all 0.3s ease; font-weight: 500;
         }
         .nav a:hover { background: var(--primary); color: white; transform: translateY(-2px); }
-    
+   
         section {
             background: rgba(15, 23, 42, 0.95);
             border-radius: 20px;
@@ -67,7 +67,7 @@
             margin-bottom: 32px;
             border: 1px solid #334155;
         }
-    
+   
         h2 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.85rem; margin-bottom: 28px; color: white;
@@ -78,15 +78,15 @@
             width: 60px; height: 3px;
             background: linear-gradient(to right, var(--primary), var(--accent));
         }
-    
+   
         .bio { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 32px; }
-    
+   
         .grid, .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-    
+   
         .card, .project-card {
             background: #1e2937;
             padding: 20px;
@@ -98,15 +98,15 @@
             transform: translateY(-6px);
             background: #334155;
         }
-    
+   
         .icon { font-size: 28px; color: var(--primary); margin-bottom: 16px; }
-    
+   
         .skills { display: flex; flex-wrap: wrap; gap: 12px; }
         .skill-tag {
             background: #334155; color: #e2e8f0; padding: 8px 20px;
             border-radius: 9999px; font-size: 0.95rem;
         }
-    
+   
         footer {
             text-align: center;
             padding: 40px 20px 20px;
@@ -211,29 +211,55 @@
             </div>
         </section>
 
-        <!-- Portfolio Section (All 15 Files) -->
+        <!-- Portfolio Section - FIXED LINKS -->
         <section id="portfolio">
             <h2>Portfolio &amp; Reports</h2>
             <div class="projects-grid">
-                <a href="1%20LFI-to-RCE%20case%20(PHP%20info%20screenshot).pdf" class="project-card" target="_blank"><strong>LFI-to-RCE Case Study</strong><br><small>PHP Info + RCE</small></a>
-                <a href="1%20website%20shell%20link%20with%20screenshot.pdf" class="project-card" target="_blank"><strong>Web Shell Upload</strong><br><small>Shell Link with Proof</small></a>
-                <a href="3%20random%20%22No%20Redirect%22%20websites.pdf" class="project-card" target="_blank"><strong>No Redirect Websites</strong><br><small>3 Findings</small></a>
-                <a href="5%20LFI%20website%20links%20with%20screenshots.pdf" class="project-card" target="_blank"><strong>LFI Vulnerabilities</strong><br><small>5 Websites</small></a>
-                <a href="5%20SQLi%20website%20links%20with%20screenshots.pdf" class="project-card" target="_blank"><strong>SQL Injection Findings</strong><br><small>5 Websites</small></a>
-                <a href="500%20lead%20generation%20Building%20owner%20of%20Queens....pdf" class="project-card" target="_blank"><strong>Lead Generation Report</strong><br><small>500 Queens Building Owners</small></a>
-                <a href="Bug%20Report%20Local%20File%20Inclusion%20(LFI)%20Vulnerabili....pdf" class="project-card" target="_blank"><strong>LFI Detailed Bug Report</strong><br><small>Vulnerability Report</small></a>
-                <a href="Extract%205%20websites%27%20user%20credentials%20using%20Havij....pdf" class="project-card" target="_blank"><strong>SQLi Credential Extraction</strong><br><small>Havij Tool</small></a>
-                <a href="Identify%203%20(WAF-protected)%20websites%20and%20d....pdf" class="project-card" target="_blank"><strong>WAF-Protected Websites</strong><br><small>3 Websites Identified</small></a>
-                <a href="Osint%20report%20on%20Jenna%20Maria%20davidson.pdf" class="project-card" target="_blank"><strong>OSINT Report - Jenna Maria Davidson</strong><br><small>Personal OSINT</small></a>
-                <a href="Software%20Agency%20Owner%20in%20NEW%20JerseyContact....pdf" class="project-card" target="_blank"><strong>Software Agency Owners - New Jersey</strong><br><small>Lead Generation</small></a>
-               <a href="deface-page-upload.pdf" class="project-card" target="_blank">
-            <strong>Deface Page Upload</strong><br>
-                   <small>Proof of Concept</small>
-                    </a>
-
-                <a href="Vulnerability%20Assessment%20&%20Penetration%20Testin....pdf" class="project-card" target="_blank"><strong>Vulnerability Assessment &amp; Pen Testing</strong><br><small>Full Report</small></a>
-                <a href="corporate%20osint%20.pdf" class="project-card" target="_blank"><strong>Corporate OSINT Report</strong><br><small>Company Recon</small></a>
-                <a href="websites%20vulnerable%20to%20XSS%20(popup%20proof).pdf" class="project-card" target="_blank"><strong>XSS Vulnerabilities</strong><br><small>Popup Proof</small></a>
+                <a href="1%20LFI-to-RCE%20case%20(PHP%20info%20screenshot).pdf" class="project-card" target="_blank">
+                    <strong>LFI-to-RCE Case Study</strong><br><small>PHP Info + RCE</small>
+                </a>
+                <a href="1%20website%20shell%20link%20with%20screenshot.pdf" class="project-card" target="_blank">
+                    <strong>Web Shell Upload</strong><br><small>Shell Link with Proof</small>
+                </a>
+                <a href="3%20random%20%E2%80%9CNo%20Redirect%E2%80%9D%20websites.pdf" class="project-card" target="_blank">
+                    <strong>No Redirect Websites</strong><br><small>3 Findings</small>
+                </a>
+                <a href="5%20LFI%20website%20links%20with%20screenshots.pdf" class="project-card" target="_blank">
+                    <strong>LFI Vulnerabilities</strong><br><small>5 Websites</small>
+                </a>
+                <a href="5%20SQLi%20website%20links%20with%20screenshots.pdf" class="project-card" target="_blank">
+                    <strong>SQL Injection Findings</strong><br><small>5 Websites</small>
+                </a>
+                <a href="500%20lead%20generation%20Building%20owner%20of%20Queens%20%2CNY%20.last%206%20month%20.xlsx" class="project-card" target="_blank">
+                    <strong>Lead Generation Report</strong><br><small>500 Queens Building Owners</small>
+                </a>
+                <a href="Bug%20Report%20Local%20File%20Inclusion%20(LFI)%20Vulnerability.pdf" class="project-card" target="_blank">
+                    <strong>LFI Detailed Bug Report</strong><br><small>Vulnerability Report</small>
+                </a>
+                <a href="Extract%205%20websites%E2%80%99%20user%20credentials%20using%20Havij.pdf" class="project-card" target="_blank">
+                    <strong>SQLi Credential Extraction</strong><br><small>Havij Tool</small>
+                </a>
+                <a href="Identify%203%20SQLi%20(WAF-protected)%20websites%20and%20dump%20data.pdf" class="project-card" target="_blank">
+                    <strong>WAF-Protected Websites</strong><br><small>3 Websites Identified</small>
+                </a>
+                <a href="Osint%20report%20on%20Jenna%20Maria%20davidson.pdf" class="project-card" target="_blank">
+                    <strong>OSINT Report - Jenna Maria Davidson</strong><br><small>Personal OSINT</small>
+                </a>
+                <a href="Software%20Agency%20Owner%20in%20NEW%20jerssyContact%20%2Clinkedin%20lead%20generation%20from%20open%20source%20.xlsx" class="project-card" target="_blank">
+                    <strong>Software Agency Owners - New Jersey</strong><br><small>Lead Generation</small>
+                </a>
+                <a href="deface-page-upload.pdf" class="project-card" target="_blank">
+                    <strong>Deface Page Upload</strong><br><small>Proof of Concept</small>
+                </a>
+                <a href="Vulnerability%20Assessment%20%26%20Penetration%20Testing%20(VAPT.pdf" class="project-card" target="_blank">
+                    <strong>Vulnerability Assessment &amp; Pen Testing</strong><br><small>Full Report</small>
+                </a>
+                <a href="corportae%20osint%20.pdf" class="project-card" target="_blank">
+                    <strong>Corporate OSINT Report</strong><br><small>Company Recon</small>
+                </a>
+                <a href="websites%20vulnerable%20to%20XSS%20(popup%20proof).pdf" class="project-card" target="_blank">
+                    <strong>XSS Vulnerabilities</strong><br><small>Popup Proof</small>
+                </a>
             </div>
         </section>
 
