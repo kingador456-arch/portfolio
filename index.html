@@ -3,20 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Shadoth Hossen Ador | Cybersecurity Expert</title>
-
     <meta name="description"
           content="Computer Science Engineer & Cybersecurity Specialist | Ethical Hacker | SQA Tester | SOC Analyst">
-
     <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <!-- Google Fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
-
         :root {
             --primary: #0ea5e9;
             --accent: #3b82f6;
@@ -24,17 +19,14 @@
             --gray: #1e2937;
             --light: #f8fafc;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family: 'Inter', system-ui, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
@@ -42,17 +34,14 @@
             line-height: 1.7;
             min-height: 100vh;
         }
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-
         /* =========================
            HEADER
         ========================== */
-
         header {
             background: linear-gradient(135deg, var(--dark), #1e2937);
             border-radius: 24px;
@@ -62,7 +51,6 @@
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 40%);
             border: 1px solid #334155;
         }
-
         .avatar {
             width: 160px;
             height: 160px;
@@ -71,38 +59,32 @@
             overflow: hidden;
             border: 8px solid #e2e8f0;
         }
-
         .avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
-
         h1 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 3.2rem;
             margin-bottom: 12px;
             color: white;
         }
-
         .title {
             font-size: 1.35rem;
             color: var(--primary);
             margin-bottom: 16px;
         }
-
         .tagline {
             max-width: 750px;
             margin: 0 auto 32px;
             font-size: 1.12rem;
             color: #cbd5e1;
         }
-
         /* =========================
            NAVIGATION
         ========================== */
-
         .nav {
             display: flex;
             justify-content: center;
@@ -110,7 +92,6 @@
             flex-wrap: wrap;
             margin-top: 20px;
         }
-
         .nav a {
             color: #e2e8f0;
             text-decoration: none;
@@ -120,17 +101,14 @@
             transition: all 0.3s ease;
             font-weight: 500;
         }
-
         .nav a:hover {
             background: var(--primary);
             color: white;
             transform: translateY(-2px);
         }
-
         /* =========================
            SECTIONS
         ========================== */
-
         section {
             background: rgba(15, 23, 42, 0.95);
             border-radius: 20px;
@@ -138,7 +116,6 @@
             margin-bottom: 32px;
             border: 1px solid #334155;
         }
-
         h2 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.85rem;
@@ -147,7 +124,6 @@
             position: relative;
             padding-bottom: 12px;
         }
-
         h2::after {
             content: '';
             position: absolute;
@@ -157,28 +133,23 @@
             height: 3px;
             background: linear-gradient(to right, var(--primary), var(--accent));
         }
-
         .bio {
             font-size: 1.1rem;
             color: #cbd5e1;
             margin-bottom: 30px;
         }
-
         /* =========================
            GRID
         ========================== */
-
         .grid,
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-
         /* =========================
            CARDS
         ========================== */
-
         .card,
         .project-card {
             background: #1e2937;
@@ -186,56 +157,46 @@
             border-radius: 16px;
             transition: all 0.3s ease;
         }
-
         .card:hover,
         .project-card:hover {
             transform: translateY(-6px);
             background: #334155;
         }
-
         .project-card {
             color: #e2e8f0;
             text-decoration: none;
             display: block;
             border: 1px solid transparent;
         }
-
         .project-card:hover {
             border-color: var(--primary);
         }
-
         .project-card strong {
             color: white;
             font-size: 1.05rem;
         }
-
         .project-card small {
             color: #94a3b8;
         }
-
         .project-icon {
             font-size: 25px;
             color: var(--primary);
             margin-bottom: 14px;
         }
-
         .icon {
             font-size: 28px;
             color: var(--primary);
             margin-bottom: 16px;
         }
-
         /* =========================
            SKILLS
         ========================== */
-
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
             margin-top: 15px;
         }
-
         .skill-tag {
             background: #334155;
             color: #e2e8f0;
@@ -243,17 +204,14 @@
             border-radius: 9999px;
             font-size: 0.95rem;
         }
-
         /* =========================
            EXPERIENCE
         ========================== */
-
         .experience-item {
             background: #1e2937;
             padding: 25px;
             border-radius: 16px;
         }
-
         .experience-header {
             display: flex;
             justify-content: space-between;
@@ -261,37 +219,30 @@
             flex-wrap: wrap;
             margin-bottom: 20px;
         }
-
         .exp-title {
             font-size: 1.2rem;
             font-weight: 600;
             color: white;
         }
-
         .exp-company {
             color: var(--primary);
             margin-top: 5px;
         }
-
         .experience-item ul {
             padding-left: 20px;
             color: #cbd5e1;
         }
-
         .experience-item li {
             margin-bottom: 8px;
         }
-
         /* =========================
            PORTFOLIO
         ========================== */
-
         .portfolio-intro {
             color: #94a3b8;
             margin-top: -12px;
             margin-bottom: 28px;
         }
-
         .file-type {
             display: inline-block;
             margin-top: 12px;
@@ -301,100 +252,76 @@
             padding: 4px 10px;
             border-radius: 999px;
         }
-
         /* =========================
            CONTACT
         ========================== */
-
         .contact-link {
             text-decoration: none;
             color: inherit;
             display: block;
         }
-
         /* =========================
            FOOTER
         ========================== */
-
         footer {
             text-align: center;
             padding: 40px 20px 20px;
             opacity: 0.7;
             font-size: 0.95rem;
         }
-
         /* =========================
            MOBILE
         ========================== */
-
         @media (max-width: 768px) {
-
             .container {
                 padding: 20px 12px;
             }
-
             header {
                 padding: 40px 20px;
                 border-radius: 18px;
             }
-
             h1 {
                 font-size: 2.3rem;
             }
-
             .title {
                 font-size: 1.1rem;
             }
-
             .tagline {
                 font-size: 1rem;
             }
-
             section {
                 padding: 30px 20px;
                 border-radius: 16px;
             }
-
             h2 {
                 font-size: 1.55rem;
             }
-
             .avatar {
                 width: 130px;
                 height: 130px;
             }
-
             .nav a {
                 padding: 10px 18px;
             }
-
             .experience-header {
                 display: block;
             }
         }
     </style>
 </head>
-
 <body>
-
 <div class="container">
-
     <!-- =========================
          HEADER
     ========================== -->
-
     <header>
-
         <div class="avatar">
             <img src="avatar.jpg" alt="Shadoth Hossen Ador">
         </div>
-
         <h1>Shadoth Hossen Ador</h1>
-
         <div class="title">
             Computer Science Engineer &amp; Cybersecurity Expert
         </div>
-
         <p class="tagline">
             Ethical Hacker |
             SQA Tester |
@@ -403,7 +330,6 @@
             OSINT Specialist |
             WordPress Security Professional
         </p>
-
         <div class="nav">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
@@ -412,972 +338,369 @@
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </div>
-
     </header>
-
 
     <!-- =========================
          ABOUT
     ========================== -->
-
     <section id="about">
-
         <h2>About Me</h2>
-
         <div class="bio">
             I’m a passionate Computer Science Engineer and
             Cybersecurity Specialist with expertise in ethical hacking,
             penetration testing, OSINT, SQA testing, SOC analysis,
             and web application security.
-
             I specialize in helping businesses strengthen their
             digital defenses through WordPress hardening,
             malware removal, and vulnerability assessments.
         </div>
-
         <div class="bio">
             With a strong foundation in secure development practices
             and real-world security operations, I combine technical
             precision with clear communication to deliver exceptional
             results.
-
             My approach prioritizes ethics, professionalism,
             and measurable impact for every client and project.
         </div>
-
     </section>
-
 
     <!-- =========================
          EXPERIENCE
     ========================== -->
-
     <section id="experience">
-
         <h2>Professional Experience</h2>
-
         <div class="experience-item">
-
             <div class="experience-header">
-
                 <div>
-
                     <div class="exp-title">
                         Cybersecurity &amp; Ethical Hacking Intern
                     </div>
-
                     <div class="exp-company">
                         Remote Internship
                     </div>
-
                 </div>
-
                 <div style="color:#94a3b8; font-size:0.95rem;">
                     Dec 2025 – Jan 2026
                 </div>
-
             </div>
-
             <ul>
-
                 <li>
                     Conducted comprehensive Open Source Intelligence
                     (OSINT) operations.
                 </li>
-
                 <li>
                     Performed LinkedIn lead generation targeting
                     US-based companies.
                 </li>
-
                 <li>
                     Executed manual and automated penetration testing.
                 </li>
-
                 <li>
                     Performed reverse engineering on software and games.
                 </li>
-
                 <li>
                     Developed and customized WordPress websites.
                 </li>
-
             </ul>
-
         </div>
-
     </section>
-
 
     <!-- =========================
          SKILLS
     ========================== -->
-
     <section id="skills">
-
         <h2>Technical Skills</h2>
-
         <div class="grid">
-
             <div class="card">
-
                 <div class="icon">
                     <i class="fas fa-code"></i>
                 </div>
-
                 <h3>Programming &amp; Web</h3>
-
                 <div class="skills">
-
                     <span class="skill-tag">Python</span>
                     <span class="skill-tag">JavaScript</span>
                     <span class="skill-tag">C++</span>
                     <span class="skill-tag">Java</span>
                     <span class="skill-tag">HTML/CSS</span>
                     <span class="skill-tag">WordPress</span>
-
                 </div>
-
             </div>
-
-
             <div class="card">
-
                 <div class="icon">
                     <i class="fas fa-shield-alt"></i>
                 </div>
-
                 <h3>Cybersecurity &amp; Testing</h3>
-
                 <div class="skills">
-
-                    <span class="skill-tag">
-                        Penetration Testing
-                    </span>
-
-                    <span class="skill-tag">
-                        OSINT
-                    </span>
-
-                    <span class="skill-tag">
-                        SQA Testing
-                    </span>
-
-                    <span class="skill-tag">
-                        SOC Analysis
-                    </span>
-
-                    <span class="skill-tag">
-                        Reverse Engineering
-                    </span>
-
-                    <span class="skill-tag">
-                        WordPress Security
-                    </span>
-
+                    <span class="skill-tag">Penetration Testing</span>
+                    <span class="skill-tag">OSINT</span>
+                    <span class="skill-tag">SQA Testing</span>
+                    <span class="skill-tag">SOC Analysis</span>
+                    <span class="skill-tag">Reverse Engineering</span>
+                    <span class="skill-tag">WordPress Security</span>
                 </div>
-
             </div>
-
-
             <div class="card">
-
                 <div class="icon">
                     <i class="fas fa-tools"></i>
                 </div>
-
                 <h3>Tools &amp; Technologies</h3>
-
                 <div class="skills">
-
                     <span class="skill-tag">Burp Suite</span>
                     <span class="skill-tag">Nmap</span>
                     <span class="skill-tag">Acunetix</span>
                     <span class="skill-tag">Nessus</span>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
 
     <!-- =========================
          PORTFOLIO & REPORTS
-         ALL CURRENT GITHUB FILES
+         Exact filenames from repository
     ========================== -->
-
     <section id="portfolio">
-
         <h2>Portfolio &amp; Reports</h2>
-
         <p class="portfolio-intro">
             Selected cybersecurity, OSINT, vulnerability assessment,
             penetration testing, research, and lead generation projects.
-            Click any project to open the report or file.
+            Click any project to open the report or file instantly.
         </p>
-
         <div class="projects-grid">
 
-
-            <!-- 1. LFI TO RCE -->
-
-            <a
-                href="lfi-rce.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-file-shield"></i>
-                </div>
-
-                <strong>LFI-to-RCE Case Study</strong>
-
-                <br>
-
-                <small>
-                    PHP Info + RCE
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 1. LFI-to-RCE -->
+            <a href="lfi-rce.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-file-shield"></i></div>
+                <strong>LFI-to-RCE Case Study</strong><br>
+                <small>PHP Info + RCE</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 2. WEB SHELL -->
-
-            <a
-                href="web-shell.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-terminal"></i>
-                </div>
-
-                <strong>Web Shell Upload</strong>
-
-                <br>
-
-                <small>
-                    Shell Link with Proof
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 2. Web Shell -->
+            <a href="web-shell.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-terminal"></i></div>
+                <strong>Web Shell Upload</strong><br>
+                <small>Shell Link with Proof</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 3. NO REDIRECT -->
-
-            <a
-                href="no-redirect.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-link"></i>
-                </div>
-
-                <strong>No Redirect Websites</strong>
-
-                <br>
-
-                <small>
-                    3 Findings
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 3. No Redirect -->
+            <a href="no-redirect.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-link"></i></div>
+                <strong>No Redirect Websites</strong><br>
+                <small>3 Findings</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 4. LFI FINDINGS -->
-
-            <a
-                href="lfi-findings.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-bug"></i>
-                </div>
-
-                <strong>LFI Vulnerabilities</strong>
-
-                <br>
-
-                <small>
-                    5 Websites
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 4. LFI Findings -->
+            <a href="lfi-findings.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-bug"></i></div>
+                <strong>LFI Vulnerabilities</strong><br>
+                <small>5 Websites</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 5. SQLI FINDINGS -->
-
-            <a
-                href="sqli-findings.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-database"></i>
-                </div>
-
-                <strong>SQL Injection Findings</strong>
-
-                <br>
-
-                <small>
-                    5 Websites
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 5. SQLi Findings -->
+            <a href="sqli-findings.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-database"></i></div>
+                <strong>SQL Injection Findings</strong><br>
+                <small>5 Websites</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 6. QUEENS LEADS -->
-
-            <a
-                href="queens-leads-on-fiver.xlsx"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-table"></i>
-                </div>
-
-                <strong>Queens Lead Generation</strong>
-
-                <br>
-
-                <small>
-                    Building Owner Contact Research
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    EXCEL FILE
-                </span>
-
+            <!-- 6. Queens Leads -->
+            <a href="queens-leads-on-fiver.xlsx" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-table"></i></div>
+                <strong>Queens Lead Generation</strong><br>
+                <small>Building Owner Contact Research</small><br>
+                <span class="file-type">EXCEL FILE</span>
             </a>
 
-
-            <!-- 7. LFI BUG REPORT -->
-
-            <a
-                href="lfi-bug-report.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-file-circle-exclamation"></i>
-                </div>
-
-                <strong>LFI Detailed Bug Report</strong>
-
-                <br>
-
-                <small>
-                    Vulnerability Report
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 7. LFI Bug Report -->
+            <a href="lfi-bug-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-file-circle-exclamation"></i></div>
+                <strong>LFI Detailed Bug Report</strong><br>
+                <small>Vulnerability Report</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 8. HAVIJ REPORT -->
-
-            <a
-                href="havij-report.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-database"></i>
-                </div>
-
-                <strong>SQLi Credential Extraction</strong>
-
-                <br>
-
-                <small>
-                    Havij Tool Report
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 8. Havij Report -->
+            <a href="havij-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-database"></i></div>
+                <strong>SQLi Credential Extraction</strong><br>
+                <small>Havij Tool Report</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 9. WAF SQLI -->
-
-            <a
-                href="waf-sqli-report.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-shield-halved"></i>
-                </div>
-
-                <strong>WAF-Protected Websites</strong>
-
-                <br>
-
-                <small>
-                    3 Websites Identified
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 9. WAF SQLi -->
+            <a href="waf-sqli-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-shield-halved"></i></div>
+                <strong>WAF-Protected Websites</strong><br>
+                <small>3 Websites Identified</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 10. PERSONAL OSINT -->
-
-            <a
-                href="osint-personal.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-user-secret"></i>
-                </div>
-
-                <strong>OSINT Investigation Report</strong>
-
-                <br>
-
-                <small>
-                    Personal OSINT Research
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 10. Personal OSINT -->
+            <a href="osint-personal.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-user-secret"></i></div>
+                <strong>OSINT Investigation Report</strong><br>
+                <small>Personal OSINT Research</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 11. NEW JERSEY LEADS -->
-
-            <a
-                href="New-jersey-software-agency-leads-on-Fiver.xlsx"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-building"></i>
-                </div>
-
-                <strong>New Jersey Software Agency Leads</strong>
-
-                <br>
-
-                <small>
-                    Software Agency Lead Generation
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    EXCEL FILE
-                </span>
-
+            <!-- 11. New Jersey Leads -->
+            <a href="New-jersey-software-agency-leads-on-Fiver.xlsx" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-building"></i></div>
+                <strong>New Jersey Software Agency Leads</strong><br>
+                <small>Software Agency Lead Generation</small><br>
+                <span class="file-type">EXCEL FILE</span>
             </a>
 
-
-            <!-- 12. DEFACE -->
-
-            <a
-                href="Deface-page-upload.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-
-                <strong>Deface Page Upload</strong>
-
-                <br>
-
-                <small>
-                    Proof of Concept
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 12. Deface Page -->
+            <a href="Deface-page-upload.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-code"></i></div>
+                <strong>Deface Page Upload</strong><br>
+                <small>Proof of Concept</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
-
 
             <!-- 13. VAPT -->
-
-            <a
-                href="VAPT-report.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-shield-virus"></i>
-                </div>
-
-                <strong>Vulnerability Assessment &amp; Pen Testing</strong>
-
-                <br>
-
-                <small>
-                    Full VAPT Report
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <a href="VAPT-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
+                <strong>Vulnerability Assessment &amp; Pen Testing</strong><br>
+                <small>Full VAPT Report</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 14. CORPORATE OSINT -->
-
-            <a
-                href="Corporate-osint.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-building-shield"></i>
-                </div>
-
-                <strong>Corporate OSINT Report</strong>
-
-                <br>
-
-                <small>
-                    Company Reconnaissance
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 14. Corporate OSINT -->
+            <a href="Corporate-osint.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-building-shield"></i></div>
+                <strong>Corporate OSINT Report</strong><br>
+                <small>Company Reconnaissance</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
-
 
             <!-- 15. XSS -->
-
-            <a
-                href="XSS-popup-report.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-window-restore"></i>
-                </div>
-
-                <strong>XSS Vulnerabilities</strong>
-
-                <br>
-
-                <small>
-                    Popup Proof
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <a href="XSS-popup-report.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-window-restore"></i></div>
+                <strong>XSS Vulnerabilities</strong><br>
+                <small>Popup Proof</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 16. CRIMINAL RECORDS -->
-
-            <a
-                href="Criminal-records-check-on-Fiver.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-file-circle-check"></i>
-                </div>
-
-                <strong>Criminal Records Check</strong>
-
-                <br>
-
-                <small>
-                    Fiverr Research Report
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 16. Criminal Records -->
+            <a href="Criminal-records-check-on-Fiver.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-file-circle-check"></i></div>
+                <strong>Criminal Records Check</strong><br>
+                <small>Fiverr Research Report</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 17. RECRUITMENT ACTIVITY -->
-
-            <a
-                href="Recruitment-Activity-Report-Fiver.pdf"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-
-                <strong>Recruitment Activity Report</strong>
-
-                <br>
-
-                <small>
-                    Recruitment Research
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    PDF REPORT
-                </span>
-
+            <!-- 17. Recruitment Activity -->
+            <a href="Recruitment-Activity-Report-Fiver.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-users"></i></div>
+                <strong>Recruitment Activity Report</strong><br>
+                <small>Recruitment Research</small><br>
+                <span class="file-type">PDF REPORT</span>
             </a>
 
-
-            <!-- 18. BRONX COOPERATIVE COMPLEXES -->
-
-            <a
-                href="Phoneemail-sheet-for-cooperative-complexes-in-the-BronxNY-Fiver.xlsx"
-                class="project-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <div class="project-icon">
-                    <i class="fas fa-address-book"></i>
-                </div>
-
-                <strong>Bronx Cooperative Complexes</strong>
-
-                <br>
-
-                <small>
-                    Phone &amp; Email Research
-                </small>
-
-                <br>
-
-                <span class="file-type">
-                    EXCEL FILE
-                </span>
-
+            <!-- 18. Bronx Cooperative Complexes -->
+            <a href="Phoneemail-sheet-for-cooperative-complexes-in-the-BronxNY-Fiver.xlsx" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-address-book"></i></div>
+                <strong>Bronx Cooperative Complexes</strong><br>
+                <small>Phone &amp; Email Research</small><br>
+                <span class="file-type">EXCEL FILE</span>
             </a>
 
         </div>
-
     </section>
-
 
     <!-- =========================
          EDUCATION
     ========================== -->
-
     <section id="education">
-
         <h2>Education</h2>
-
         <div class="grid">
-
             <div class="card">
-
-                <strong>
-                    B.Sc. in Computer Science &amp; Engineering
-                </strong>
-
-                <br>
-
-                Uttara University
-
-                <br>
-
+                <strong>B.Sc. in Computer Science &amp; Engineering</strong><br>
+                Uttara University<br>
                 CGPA: 3.21 | 2023 – 2026
-
             </div>
-
-
             <div class="card">
-
-                <strong>
-                    Cyber Security &amp; Ethical Hacking
-                </strong>
-
-                <br>
-
-                Arena Web Security
-
-                <br>
-
+                <strong>Cyber Security &amp; Ethical Hacking</strong><br>
+                Arena Web Security<br>
                 2025 – 2026
-
             </div>
-
         </div>
-
     </section>
-
 
     <!-- =========================
          CONTACT
     ========================== -->
-
     <section id="contact">
-
         <h2>Get In Touch</h2>
-
         <div class="grid">
-
-
             <!-- EMAIL -->
-
-            <a
-                href="mailto:Kingador456@gmail.com"
-                class="contact-link"
-            >
-
+            <a href="mailto:Kingador456@gmail.com" class="contact-link">
                 <div class="card">
-
-                    <div class="icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-
-                    <strong>Email</strong>
-
-                    <br>
-
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <strong>Email</strong><br>
                     Kingador456@gmail.com
-
                 </div>
-
             </a>
-
-
             <!-- LINKEDIN -->
-
-            <a
-                href="https://www.linkedin.com/in/kingador456"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-link"
-            >
-
+            <a href="https://www.linkedin.com/in/kingador456" target="_blank" rel="noopener noreferrer" class="contact-link">
                 <div class="card">
-
-                    <div class="icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-
-                    <strong>LinkedIn</strong>
-
-                    <br>
-
+                    <div class="icon"><i class="fab fa-linkedin"></i></div>
+                    <strong>LinkedIn</strong><br>
                     linkedin.com/in/kingador456
-
                 </div>
-
             </a>
-
-
             <!-- PHONE -->
-
             <div class="card">
-
-                <div class="icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-
-                <strong>Phone</strong>
-
-                <br>
-
+                <div class="icon"><i class="fas fa-phone"></i></div>
+                <strong>Phone</strong><br>
                 +880 1799-297923
-
             </div>
-
-
             <!-- LOCATION -->
-
             <div class="card">
-
-                <div class="icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-
-                <strong>Location</strong>
-
-                <br>
-
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                <strong>Location</strong><br>
                 Uttara, Dhaka, Bangladesh
-
             </div>
-
         </div>
-
     </section>
-
 </div>
-
 
 <!-- =========================
      FOOTER
 ========================== -->
-
 <footer>
-
-    © 2026 Shadoth Hossen Ador • Secure • Ethical • Professional
-
-    <br>
-
+    © 2026 Shadoth Hossen Ador • Secure • Ethical • Professional<br>
     Built with passion for cybersecurity
-
 </footer>
 
-
 <!-- =========================
-     SMOOTH SCROLL
+     SMOOTH SCROLL (only for internal # links)
 ========================== -->
-
 <script>
-
 document.addEventListener("DOMContentLoaded", function () {
-
-    document
-        .querySelectorAll('a[href^="#"]')
-        .forEach(function (anchor) {
-
-            anchor.addEventListener("click", function (e) {
-
-                e.preventDefault();
-
-                const targetId =
-                    this.getAttribute("href").substring(1);
-
-                const targetElement =
-                    document.getElementById(targetId);
-
-                if (targetElement) {
-
-                    const headerOffset = 40;
-
-                    const elementPosition =
-                        targetElement.getBoundingClientRect().top;
-
-                    const offsetPosition =
-                        elementPosition +
-                        window.scrollY -
-                        headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
-
-                }
-
-            });
-
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                const headerOffset = 40;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
         });
-
+    });
 });
-
 </script>
-
 </body>
 </html>
