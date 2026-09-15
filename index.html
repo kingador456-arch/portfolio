@@ -51,7 +51,6 @@
             margin: 0 auto;
             padding: 40px 20px;
         }
-
         /* ========== SINGLE THEME SWITCH ========== */
         .theme-switch {
             position: fixed;
@@ -59,7 +58,6 @@
             right: 18px;
             z-index: 1000;
         }
-
         .theme-toggle {
             display: flex;
             align-items: center;
@@ -76,7 +74,6 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.25);
             user-select: none;
         }
-
         .theme-toggle.dark {
             background: #0f172a;
             color: #ffffff;
@@ -85,7 +82,6 @@
             color: #ffffff;
             font-size: 1.05rem;
         }
-
         .theme-toggle.light {
             background: #f1f5f9;
             color: #0f172a;
@@ -96,12 +92,10 @@
             color: #f59e0b;
             font-size: 1.05rem;
         }
-
         .theme-toggle:hover {
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
-
         /* =========================
            HEADER
         ========================== */
@@ -181,7 +175,6 @@
             color: white;
             transform: translateY(-2px);
         }
-
         /* =========================
            SECTIONS
         ========================== */
@@ -220,7 +213,6 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 22px;
         }
-
         /* ========== PROFESSIONAL PROJECT CARDS ========== */
         .card,
         .project-card {
@@ -233,27 +225,23 @@
             position: relative;
             overflow: hidden;
         }
-
         [data-theme="light"] .card,
         [data-theme="light"] .project-card {
             background: linear-gradient(160deg, #ffffff 0%, #f8fafc 100%);
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
         }
-
         .card:hover,
         .project-card:hover {
             transform: translateY(-6px);
             border-color: var(--primary);
             box-shadow: 0 12px 30px rgba(14, 165, 233, 0.15);
         }
-
         .project-card {
             color: var(--text);
             text-decoration: none;
             display: block;
         }
-
         .project-card strong {
             color: var(--text);
             font-size: 1.08rem;
@@ -261,25 +249,21 @@
             display: block;
             margin-bottom: 6px;
         }
-
         .project-card small {
             color: var(--text3);
             font-size: 0.92rem;
         }
-
         .project-icon {
             font-size: 26px;
             color: var(--primary);
             margin-bottom: 16px;
             opacity: 0.95;
         }
-
         .icon {
             font-size: 28px;
             color: var(--primary);
             margin-bottom: 16px;
         }
-
         .skills {
             display: flex;
             flex-wrap: wrap;
@@ -293,7 +277,6 @@
             border-radius: 9999px;
             font-size: 0.95rem;
         }
-
         .experience-item {
             background: linear-gradient(160deg, #1e2937 0%, #0f172a 100%);
             padding: 25px;
@@ -305,7 +288,6 @@
             background: linear-gradient(160deg, #ffffff 0%, #f8fafc 100%);
             border: 1px solid #e2e8f0;
         }
-
         .experience-header {
             display: flex;
             justify-content: space-between;
@@ -329,13 +311,11 @@
         .experience-item li {
             margin-bottom: 8px;
         }
-
         .portfolio-intro {
             color: var(--text3);
             margin-top: -12px;
             margin-bottom: 28px;
         }
-
         .file-type {
             display: inline-block;
             margin-top: 16px;
@@ -348,13 +328,11 @@
             border-radius: 999px;
             border: 1px solid rgba(14, 165, 233, 0.25);
         }
-
         .contact-link {
             text-decoration: none;
             color: inherit;
             display: block;
         }
-
         footer {
             text-align: center;
             padding: 40px 20px 20px;
@@ -362,7 +340,6 @@
             font-size: 0.95rem;
             color: var(--text3);
         }
-
         @media (max-width: 768px) {
             .container {
                 padding: 20px 12px;
@@ -409,7 +386,6 @@
     </style>
 </head>
 <body>
-
 <!-- Single Theme Switch -->
 <div class="theme-switch">
     <button class="theme-toggle dark" id="themeToggle" aria-label="Toggle theme">
@@ -417,7 +393,6 @@
         <span id="themeLabel">NIGHT MODE</span>
     </button>
 </div>
-
 <div class="container">
     <header>
         <div class="avatar">
@@ -442,10 +417,10 @@
             <a href="#skills">Skills</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#education">Education</a>
+            <a href="#certificates">Certificates</a>
             <a href="#contact">Contact</a>
         </div>
     </header>
-
     <section id="about">
         <h2>About Me</h2>
         <div class="bio">
@@ -466,7 +441,6 @@
             and measurable impact for every client and project.
         </div>
     </section>
-
     <section id="experience">
         <h2>Professional Experience</h2>
         <div class="experience-item">
@@ -508,7 +482,6 @@
             </ul>
         </div>
     </section>
-
     <section id="skills">
         <h2>Technical Skills</h2>
         <div class="grid">
@@ -558,7 +531,6 @@
             </div>
         </div>
     </section>
-
     <section id="portfolio">
         <h2>Portfolio &amp; Reports</h2>
         <p class="portfolio-intro">
@@ -671,7 +643,6 @@
             </a>
         </div>
     </section>
-
     <section id="education">
         <h2>Education</h2>
         <div class="grid">
@@ -685,6 +656,41 @@
                 Arena Web Security<br>
                 2025 – 2026
             </div>
+        </div>
+    </section>
+
+    <!-- ========== NEW CERTIFICATES SECTION ========== -->
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <p class="portfolio-intro">
+            Professional certificates and academic credentials.
+            Click any certificate to view the PDF.
+        </p>
+        <div class="projects-grid">
+            <a href="Cyber Security Certifate.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-certificate"></i></div>
+                <strong>Cyber Security Certificate</strong>
+                <small>Professional Certification</small>
+                <span class="file-type">PDF CERTIFICATE</span>
+            </a>
+            <a href="HSC certificcate .pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+                <strong>HSC Certificate</strong>
+                <small>Higher Secondary Certificate</small>
+                <span class="file-type">PDF CERTIFICATE</span>
+            </a>
+            <a href="SSC Certificate .pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+                <strong>SSC Certificate</strong>
+                <small>Secondary School Certificate</small>
+                <span class="file-type">PDF CERTIFICATE</span>
+            </a>
+            <a href="corporate-osint.pdf" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-icon"><i class="fas fa-building-shield"></i></div>
+                <strong>Corporate OSINT Certificate</strong>
+                <small>OSINT Professional Report</small>
+                <span class="file-type">PDF CERTIFICATE</span>
+            </a>
         </div>
     </section>
 
@@ -718,22 +724,18 @@
         </div>
     </section>
 </div>
-
 <footer>
     © 2026 Shadoth Hossen Ador • Secure • Ethical • Professional<br>
     Built with passion for cybersecurity
 </footer>
-
 <script>
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
-
     function setTheme(theme) {
         html.setAttribute('data-theme', theme);
         try {
             localStorage.setItem('theme', theme);
         } catch (e) {}
-
         if (theme === 'dark') {
             themeToggle.classList.remove('light');
             themeToggle.classList.add('dark');
@@ -744,18 +746,15 @@
             themeToggle.innerHTML = '<i class="fas fa-sun"></i><span>DAY MODE</span>';
         }
     }
-
     let savedTheme = 'dark';
     try {
         savedTheme = localStorage.getItem('theme') || 'dark';
     } catch (e) {}
     setTheme(savedTheme);
-
     themeToggle.addEventListener('click', () => {
         const current = html.getAttribute('data-theme');
         setTheme(current === 'dark' ? 'light' : 'dark');
     });
-
     document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
             anchor.addEventListener("click", function (e) {
